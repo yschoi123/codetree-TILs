@@ -8,11 +8,7 @@ public class Main {
         int a = sc.nextInt();
 
         for(int i=1; i<=a; i++){
-            if(i%2 == 0 && i%4 != 0){
-                continue;
-            } else if((i/8)%2 == 0) {
-                continue;
-            } else if((i%7)<4) {
+            if((i%2 == 0 && i%4 != 0) || ((i/8)%2 == 0) || ((i%7)<4)){
                 continue;
             } else {
                 System.out.print(i+" ");
