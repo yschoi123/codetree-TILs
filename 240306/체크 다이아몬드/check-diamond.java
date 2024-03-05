@@ -5,52 +5,27 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int size = 2*n -1;
-
-        for(int i=0; i<size; i++){
-            if(i<n) {
-                for(int j=0; j<size; j++){
-                    if( j>=(n-1)-i && j<=(n-1)+i){
-                        if(i%2==0) {
-                            if((j-(size-1)/2%2)%2==0) {
-                                System.out.print("*");
-                            } else {
-                                System.out.print(" ");
-                            }
-                        } else {
-                            if((j-(size-1)/2%2)%2!=0) {
-                                System.out.print("*");
-                            } else {
-                                System.out.print(" ");
-                            }
-                        }
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
-               
-            } else {
-                for(int j=0; j<size; j++){
-                    if( j>=(n-1)-(size-i-1) && j<=(n-1)+(size-i-1)){
-                        if(i%2==0) {
-                            if((j-(size-1)/2%2)%2==0) {
-                                System.out.print("*");
-                            } else {
-                                System.out.print(" ");
-                            }
-                        } else {
-                            if((j-(size-1)/2%2)%2!=0) {
-                                System.out.print("*");
-                            } else {
-                                System.out.print(" ");
-                            }
-                        }
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n-1-i; j++){
+                System.out.print(" ");
             }
-             System.out.println();
+            for(int j=0; j<i+1; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
         }
+
+        for(int i=n-2; i>=0; i--){
+            for(int j=0; j<n-1-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<i+1; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    
     }
 }
