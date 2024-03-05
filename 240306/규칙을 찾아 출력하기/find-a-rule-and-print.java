@@ -7,24 +7,15 @@ public class Main {
 
         int n = sc.nextInt();
 
-        // 첫째줄 찍기
         for(int i=0; i<n; i++){
-            System.out.print("* ");
-        }
-        System.out.println();
-
-        // 다음줄 찍기
-        for(int i=0; i<n-1; i++){
-            System.out.print("* ");
-            
-            for(int j=0; j<i; j++){
-                System.out.print("* ");
+            for(int j=0; j<n; j++) {
+                if(i == 0 || j == n-1 || i>j ) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
             }
-
-            for(int j=0; j<n-2-i; j++){
-                System.out.print("  ");
-            }
-            System.out.println("*");
+            System.out.println();
         }
 
 
