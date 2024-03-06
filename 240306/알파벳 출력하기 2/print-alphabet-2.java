@@ -15,11 +15,11 @@ public class Main {
             }
             for(int j=0; j<n-i; j++){
                 System.out.print(alpha+" ");
-                if(alpha == 'Z') {
+
+                alpha += 1;
+                if(alpha > 'Z') {
                     alpha = 'A';
-                } else {
-                    alpha += 1;
-                }
+                } 
             
             }
             System.out.println();
