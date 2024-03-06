@@ -7,7 +7,6 @@ public class Main {
         String str1 = sc.next();
         String str2 = sc.next();
 
-        int num1 = 0, num2 = 0;
         String numStr1 = "";
         String numStr2 = "";
 
