@@ -11,8 +11,8 @@ public class Main {
 
         int lenA = A.length();
 
-        for(char cmd : commands.toCharArray()){
-            if(cmd == 'L') {
+        for(int i=0; i<commands.length(); i++){
+            if(commands.charAt(i) == 'L') {
                 A = A.substring(1) + A.substring(0, 1);
             } else {
                 A = A.substring(lenA-1) + A.substring(0, lenA-1);
