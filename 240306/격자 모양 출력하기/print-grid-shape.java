@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
 
-        int[][] arr = new int[n][m];
+        int[][] arr = new int[n][n];
 
         // m개의 점의 정보를 입력받으며, 격자 정보를 추가함
         for(int i=0; i<m; i++){
