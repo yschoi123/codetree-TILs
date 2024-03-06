@@ -10,10 +10,8 @@ public class Main {
 
         int[] counts = new int[10]; 
         while(a>1){
-            int remain = a%b;
+            counts[a%b] += 1;
             a /= b;
-
-            counts[remain] += 1;
         }
 
         int result = 0;
