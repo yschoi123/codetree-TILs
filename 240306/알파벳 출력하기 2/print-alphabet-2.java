@@ -7,15 +7,20 @@ public class Main {
 
         int n = sc.nextInt();
 
-        char alpa = 'A';
+        char alpha = 'A';
 
         for(int i=0; i<n; i++){
             for(int j=0; j<i; j++){
                 System.out.print("  ");
             }
             for(int j=0; j<n-i; j++){
-                System.out.print(alpa+" ");
-                alpa += 1;
+                System.out.print(alpha+" ");
+                if(alpha == 'Z') {
+                    alpha = 'A';
+                } else {
+                    alpha += 1;
+                }
+            
             }
             System.out.println();
         }
