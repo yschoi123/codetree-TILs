@@ -20,7 +20,7 @@ public class Main {
                 break;
             } 
 
-            if(i == A.length()) {
+            if(i == A.length()-1) {
                 System.out.print(-1);
             }
         }
