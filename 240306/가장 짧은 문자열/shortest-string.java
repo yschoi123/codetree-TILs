@@ -5,30 +5,30 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
 
-        String str1 = sc.next();
-        String str2 = sc.next();
-        String str3 = sc.next();
 
-        int diff = 0;
-        if(str1.length()>str2.length() && str1.length() > str3.length()){
-            if(str2.length()>str3.length()){
-                diff = str1.length() - str3.length();
-            } else {
-                 diff = str1.length() - str2.length();
-            }
-        } else if(str2.length()>str1.length() && str2.length() > str3.length()){
-            if(str1.length()>str3.length()){
-                diff = str2.length() - str3.length();
-            } else {
-                 diff = str2.length() - str1.length();
-            }
-        } else {
-            if(str1.length()>str2.length()){
-                diff = str3.length() - str2.length();
-            } else {
-                 diff = str3.length() - str1.length();
-            }
+        int len1 =  sc.next().length();
+        int len2 =  sc.next().length();
+        int len3 =  sc.next().length();
+
+        int max = len1;
+        int min = len1;
+
+        // 가장 긴 문자열 길이 구하기
+        if(max < len2) {
+            max = len2;
         }
-        System.out.print(diff);
+        if(max < len3) {
+            max = len3;
+        }
+
+        // 가장 짧은 문자열 길이 구하기
+         if(min > len2) {
+            min = len2;
+        }
+        if(min > len3) {
+            min = len3;
+        }
+        
+        System.out.print(max-min);
     }
 }
