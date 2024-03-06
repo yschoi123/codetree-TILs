@@ -5,10 +5,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
 
-        for(int i=str.length()-1; i>=0; i--){
-            if((i+1)%2==0) {
-                System.out.print(str.charAt(i));
-            } 
+        int idx = str.length()-1;
+        if((idx+1)%2 != 0) {
+            idx--;
+        }
+
+        for(int i=idx; i>=1; i-=2){
+            System.out.print(str.charAt(i));
+            
         }
         
     }
