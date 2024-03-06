@@ -7,13 +7,11 @@ public class Main {
 
         String A = sc.next();
         String B = sc.next();
-
-        String originA = new String(A);
         
         int n = 0;
 
 
-        while(true) {
+        for(int i= 0; i<A.length(); i++){
             A = A.substring(A.length()-1) + A.substring(0, A.length()-1);
             n++;
 
@@ -22,9 +20,8 @@ public class Main {
                 break;
             } 
 
-            if(A.equals(originA)) {
+            if(i == A.length()) {
                 System.out.print(-1);
-                break;
             }
         }
     }
