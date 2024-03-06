@@ -13,17 +13,15 @@ public class Main {
             numbers[i] = sc.nextInt();
         }
     
-        // 최소값을 담을 min 변수 선언
-        int min = numbers[n-1];
+        // 오름차순으로 입력이 주어졌으므로
+        // 두 수 차의 후보값은 인접한 두 숫자의 차이임
+        int min = numbers[1] - numbers[0];
 
-        for(int i=0; i<n; i++){
-            for(int j=i+1; j<n; j++){
-                // 오름차순으로 입력이 주어졌으므로 항상 numbers[j]가 numbers[i]보다 큼
-                int diff = numbers[j] - numbers[i];
-                if(diff < min) {    // 차이 값이 현재 최소값보다 작으면
-                    min = diff;     // 해당 값을 현재 최소값으로 변경
-                }
-            }
+        for(int i=1; i<n-1; i++){
+           int diff = numbers[i+1] - numbers[i];
+           if(diff < min) {
+                min = diff;
+           }
         }
         System.out.print(min);
     }
